@@ -1,43 +1,24 @@
 ---
-const pageTitle = "Hell yeah it's Astro";
+import Header from "../components/Header.astro";
+import Favicon from "../components/Favicon.astro";
+import Footer from "../components/Footer.astro";
+
+import "../styles/global.css";
+
+const pageTitle = "Home Page";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="/image/png"
-      sizes="32x32"
-      href="/images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/images/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/apple-touch-icon.png"
-    />
+    <Favicon />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Header />
     <h1>{pageTitle}</h1>
+    <Footer />
   </body>
 </html>
